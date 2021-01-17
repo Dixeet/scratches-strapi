@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/admin/roles",
+      "handler": "role.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/admin/roles/:id",
+      "handler": "role.deleteOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/admin/roles/batch-delete",
+      "handler": "role.deleteMany",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
