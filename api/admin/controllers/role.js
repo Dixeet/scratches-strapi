@@ -15,8 +15,6 @@ module.exports = {
    * @param {KoaContext} ctx - koa context
    */
   async create(ctx) {
-    console.log(validateRoleCreateInput);
-    console.log(ctx.request.body);
     try {
       await validateRoleCreateInput(ctx.request.body);
     } catch (err) {
@@ -86,7 +84,7 @@ module.exports = {
 
     try {
       if (role.code === SUPER_ADMIN_CODE) {
-        const err = new yup.ValidationError("Super admin permissions can't be edited.");
+        const err = new yup.ValidationError('Super admin permissions can\'t be edited.');
         throw formatYupErrors(err);
       }
       await validatedUpdatePermissionsInput(input);

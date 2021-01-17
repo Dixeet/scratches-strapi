@@ -9,7 +9,11 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-plugin-react": "^7.22.0"
+  },
   "dependencies": {
     "strapi": "3.4.3",
     "strapi-admin": "3.4.3",

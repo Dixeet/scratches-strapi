@@ -33,7 +33,6 @@ const CreatePage = () => {
   const id = get(params, 'params.id', null);
   const { isLoading: isLayoutLoading, data: permissionsLayout } = useFetchPermissionsLayout();
   const { role, permissions: rolePermissions, isLoading: isRoleLoading } = useFetchRole(id);
-  console.log('create');
 
   const headerActions = (handleSubmit, handleReset) => [
     {
@@ -102,8 +101,8 @@ const CreatePage = () => {
         });
         replace(`${settingsBaseURL}/roles/${res.data.id}`);
       })
+      // eslint-disable-next-line no-unused-vars
       .catch(err => {
-        console.error(err);
         setIsSubmiting(false);
         strapi.notification.toggle({
           type: 'warning',
@@ -207,6 +206,7 @@ const CreatePage = () => {
   );
 };
 
+// eslint-disable-next-line react/display-name
 export default () => (
   <CheckPagePermissions permissions={adminPermissions.settings.roles.create}>
     <CreatePage />

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useReducer, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '@buffetjs/core';

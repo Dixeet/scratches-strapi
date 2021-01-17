@@ -1,3 +1,4 @@
+/* eslint-disable */
 import reducer from '../reducer';
 
 describe('ADMIN | ee | CONTAINERS | ROLES | ListPage | reducer', () => {
